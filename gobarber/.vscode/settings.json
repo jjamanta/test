@@ -1,0 +1,42 @@
+{
+  "window.zoomLevel": 2,
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.colorTheme": "Dracula",
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.rulers": [80, 120],
+  "editor.renderLineHighlight": "gutter",
+  "editor.tabSize": 2,
+  "terminal.integrated.fontSize": 14,
+  "emmet.includeLanguages": {
+      "javascript": "javascriptreact"
+  },
+  "emmet.syntaxProfiles":{
+      "javascript": "jsx"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "editor.parameterHints.enabled": false,
+  "breadcrumbs.enabled": true,
+  "javascript.suggest.autoImports": false,
+
+  "eslint.autoFixOnSave": true,
+  "eslintvalidate": [
+    {
+      "language": "javascript",
+      "autofix": true
+    },
+    {
+      "language": "javascriptreact",
+      "autofix": true
+    },
+    {
+      "language": "typescript",
+      "autofix": true
+    },
+    {
+      "language": "typescriptreact",
+      "autofix": true  
+    }
+  ]
+}
