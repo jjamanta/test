@@ -15,12 +15,12 @@ class SessionController {
         .required(),
     });
 
-    if(!(await schema.isValid(req.body))) {
+    if (!(await schema.isValid(req.body))) {
       return res.status(400).json({ error: 'Validation fails' });
     }
     const { email, password } = req.body;
 
-    const user = await User.findOne({where: { email } });
+    const user = await User.findOne({ where: { email } });
 
     if (!user) {
       return res.status(401).json({ error: 'User not found' });
@@ -30,7 +30,7 @@ class SessionController {
       return res.status(401).json({ error: 'Password does not match' });
     }
 
-    const {id, name } = user;
+    const { id, name } = user;
 
     return res.json({
       user: {
@@ -38,7 +38,7 @@ class SessionController {
         name,
         email
       },
-      token: jwt.sign({id}, authConfig.secret, {
+      token: jwt.sign({ id }, authConfig.secret, {
         expiresIn: authConfig.expiresIn,
       }),
     });
