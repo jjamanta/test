@@ -1,0 +1,57 @@
+.cssPost {
+  border-radius: 5px;
+  background: #FFF;
+  width: 70%;
+}
+
+.cssDivPost {
+  width: 100%;
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+.cssDivAvatar {
+  float: left;
+  width: 10%;
+  min-width: 40px;
+  min-height: 40px;
+}
+
+.cssDivName {
+  float: left;
+  width: 90%;
+}
+
+.cssHorizontalBar {
+  margin-left: 15px;
+  margin-right: 15px;
+  color: gray;
+}
+
+.cssAvatar {
+  height: 30px;
+  width: 30px;  
+  border-radius: 50%;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.cssName {
+  color: #000000;
+  font-size: 12px;  
+  height: 12px;  
+  margin-top: 15px;
+  margin-left: 10px;  
+}
+
+.cssDate {
+  color: gray;
+  font-size: 10px;
+  height: 10px; 
+  margin-left: 10px;  
+}
+
+.cssContent {
+  font-size: 12px;
+  margin-left: 15px;
+}

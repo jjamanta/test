@@ -1,0 +1,14 @@
+.clsCommentAvatar {
+  float: left;
+  height: 25px;
+  width: 25px;  
+  border-radius: 50%;
+}
+
+.cssCommentContent {
+  float: left;
+  background:#d5d7de;
+  color: #000000;
+  font-size: 11px;  
+  height: 13px;
+}

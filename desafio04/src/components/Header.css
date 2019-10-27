@@ -1,0 +1,18 @@
+.clsHeader {
+  background: #4a7bf7;
+  color: #FFF;
+  height: 70px;
+  text-align: center;
+}
+
+.clsHeader1 {
+  font-size: 24px;
+  float: left;
+  padding-left: 40px;
+}
+
+.clsHeader2 {
+  font-size: 12px;
+  float: right;
+  padding-right: 40px;
+}
