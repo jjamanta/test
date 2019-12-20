@@ -1,0 +1,11 @@
+{
+  "name": "cursos",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/jjamanta/test.git",
+  "author": "Luiz Rocha <jjamanta@hotmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react-native-cli": "^2.0.1"
+  }
+}

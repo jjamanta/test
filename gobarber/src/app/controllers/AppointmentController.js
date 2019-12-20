@@ -17,7 +17,7 @@ class AppointmentController {
     const appointments = await Appointment.findAll({
       where: { user_id: req.userId, canceled_at: null },
       order: ['date'],
-      attributes: ['id', 'date'],
+      attributes: ['id', 'date', 'past', 'cancelable'],
       limit: limit,
       offset: (page - 1) * limit,
       include: [
@@ -139,24 +139,26 @@ class AppointmentController {
 
     appointment.canceled_at = new Date();
 
+    console.log('Canceled');
+
     //console.log(appointment.provider.name);
     //console.log(appointment.provider.email);
 
-    //await appointment.save();
+    await appointment.save();
 
-    await Mail.sendMail({
-      to: `${appointment.provider.name} <${appointment.provider.email}>`,
-      subject: 'Agendamento cancelado',
-      template: 'cancellation',
-      context: {
-        provider: appointment.provider.name,
-        user: appointment.user.name,
-        date: format(appointment.date,
-          "'para o dia' dd 'de' MMMM', as 'H:mm'h'",
-          { locale: pt },
-        ),
-      },
-    });
+    /*     await Mail.sendMail({
+          to: `${appointment.provider.name} <${appointment.provider.email}>`,
+          subject: 'Agendamento cancelado',
+          template: 'cancellation',
+          context: {
+            provider: appointment.provider.name,
+            user: appointment.user.name,
+            date: format(appointment.date,
+              "'para o dia' dd 'de' MMMM', as 'H:mm'h'",
+              { locale: pt },
+            ),
+          },
+        }); */
 
     return res.json(appointment)
   }
